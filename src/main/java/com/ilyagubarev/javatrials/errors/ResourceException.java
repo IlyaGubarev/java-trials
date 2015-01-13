@@ -2,9 +2,9 @@
  *  Project:  Java Trials
  *  Outline:  Common Java programming practices
  *
- *  File:     AutoResource.xml
+ *  File:     ResourceException.xml
  *  Folder:   /src/main/java/com/ilyagubarev/javatrials/errors
- *  Revision: 1.01, 13 January 2015
+ *  Revision: 1.00, 13 January 2015
  *  Created:  13 January 2015
  *  Authors:  Ilya Gubarev
  *
@@ -31,43 +31,6 @@
  */
 package com.ilyagubarev.javatrials.errors;
 
-public class AutoResource implements AutoCloseable {
+public abstract class ResourceException extends Exception {
 
-    private final boolean failOnClosure;
-    private final boolean failOnInvocation;
-
-    private boolean closed;
-    private boolean created;
-
-    public AutoResource(boolean failOnCreation, boolean failOnInvocation,
-            boolean failOnClosure) throws ResourceCreationException {
-        if (failOnCreation) {
-            throw new ResourceCreationException();
-        }
-        this.failOnClosure = failOnClosure;
-        this.failOnInvocation = failOnInvocation;
-        created = true;
-    }
-
-    public boolean isClosed() {
-        return closed;
-    }
-
-    public boolean isCreated() {
-        return created;
-    }
-
-    @Override
-    public void close() throws Exception {
-        if (failOnClosure) {
-            throw new ResourceClosureException();
-        }
-        closed = true;
-    }
-
-    public void invoke() throws ResourceInvocationException {
-        if (failOnInvocation) {
-            throw new ResourceInvocationException();
-        }
-    }
 }
