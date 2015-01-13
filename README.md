@@ -1,2 +1,2 @@
-# java-trials
+# Java Trials
 Common Java programming practices
