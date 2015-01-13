@@ -2,9 +2,9 @@
  *  Project:  Java Trials
  *  Outline:  Common Java programming practices
  *
- *  File:     ResourceClosureException.xml
- *  Folder:   /src/main/java/com/ilyagubarev/javatrials/errors
- *  Revision: 1.00, 13 January 2015
+ *  File:     ClosureException.xml
+ *  Folder:   /src/main/java/com/ilyagubarev/javatrials/resources/errors
+ *  Revision: 1.01, 13 January 2015
  *  Created:  13 January 2015
  *  Authors:  Ilya Gubarev
  *
@@ -29,8 +29,8 @@
  *  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  *  DEALINGS IN THE SOFTWARE.
  */
-package com.ilyagubarev.javatrials.errors;
+package com.ilyagubarev.javatrials.resources.errors;
 
-public class ResourceClosureException extends ResourceException {
+public class ClosureException extends BaseException {
 
 }
