@@ -2,9 +2,9 @@
  *  Project:  Java Trials
  *  Outline:  Common Java programming practices
  *
- *  File:     InvocationException.xml
+ *  File:     SecondInvocationException.xml
  *  Folder:   /src/main/java/com/ilyagubarev/javatrials/resources/errors
- *  Revision: 1.02, 13 January 2015
+ *  Revision: 1.00, 13 January 2015
  *  Created:  13 January 2015
  *  Authors:  Ilya Gubarev
  *
@@ -31,6 +31,6 @@
  */
 package com.ilyagubarev.javatrials.resources.errors;
 
-public abstract class InvocationException extends BaseException {
+public class SecondInvocationException extends InvocationException {
 
 }

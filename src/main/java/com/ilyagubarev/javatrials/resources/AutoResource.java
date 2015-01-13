@@ -4,7 +4,7 @@
  *
  *  File:     AutoResource.xml
  *  Folder:   /src/main/java/com/ilyagubarev/javatrials/resources
- *  Revision: 1.02, 13 January 2015
+ *  Revision: 1.03, 13 January 2015
  *  Created:  13 January 2015
  *  Authors:  Ilya Gubarev
  *
@@ -33,7 +33,8 @@ package com.ilyagubarev.javatrials.resources;
 
 import com.ilyagubarev.javatrials.resources.errors.ClosureException;
 import com.ilyagubarev.javatrials.resources.errors.CreationException;
-import com.ilyagubarev.javatrials.resources.errors.InvocationException;
+import com.ilyagubarev.javatrials.resources.errors.FirstInvocationException;
+import com.ilyagubarev.javatrials.resources.errors.SecondInvocationException;
 
 public class AutoResource implements AutoCloseable {
 
@@ -69,9 +70,15 @@ public class AutoResource implements AutoCloseable {
         closed = true;
     }
 
-    public void invoke() throws InvocationException {
+    public void invokeFirst() throws FirstInvocationException {
         if (failOnInvocation) {
-            throw new InvocationException();
+            throw new FirstInvocationException();
+        }
+    }
+
+    public void invokeSecond() throws SecondInvocationException {
+        if (failOnInvocation) {
+            throw new SecondInvocationException();
         }
     }
 }
